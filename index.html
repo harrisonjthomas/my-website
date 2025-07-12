@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>charity: water</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Montserrat', 'Inter', Arial, sans-serif;
+      color: #222;
+      line-height: 1.7;
+      background-color: #fff8e1;
+      /* subtle warm background */
+      background-image:
+        radial-gradient(circle at 60% 10%, #fffbe7 0%, #fff8e1 80%),
+        linear-gradient(180deg, #fffbe7 0%, #fff8e1 100%);
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem 3rem 1.5rem 3rem;
+      background-color: #fffbe7;
+      /* warmer header */
+      border-bottom: 2px solid #ffe082;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 100px;
+      width: auto;
+      display: block;
+      filter: drop-shadow(0 2px 12px #ffe08280);
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 1.2rem;
+    }
+
+    .cta-buttons button {
+      padding: 0.85rem 2rem;
+      border: none;
+      border-radius: 6px;
+      font-weight: 700;
+      cursor: pointer;
+      font-size: 1.08rem;
+      font-family: 'Montserrat', 'Inter', Arial, sans-serif;
+      transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+      background: linear-gradient(90deg, #ffe082 0%, #f9c439 100%);
+      color: #222;
+      border: 2px solid #f9c439;
+      box-shadow: 0 4px 24px #ffe08260;
+    }
+
+    .btn-primary {
+      background: linear-gradient(90deg, #ffe082 0%, #f9c439 100%);
+      color: #222;
+      border: 2px solid #f9c439;
+    }
+
+    .btn-primary:hover {
+      background: #fffde7;
+      color: #222;
+      border-color: #ffe082;
+    }
+
+    .btn-secondary {
+      background-color: #fff;
+      border: 2px solid #f9c439;
+      color: #222;
+    }
+
+    .btn-secondary:hover {
+      background-color: #f9c439;
+      color: #222;
+    }
+
+    .hero {
+      position: relative;
+      text-align: center;
+      /* Cool background gradient with subtle pattern */
+      background:
+        linear-gradient(180deg, #fffbe7 60%, #ffe08233 100%),
+        repeating-linear-gradient(
+          135deg,
+          #ffe08222 0 20px,
+          transparent 20px 40px
+        );
+      padding-bottom: 2rem;
+    }
+
+    .hero-title-img {
+      width: 90%;
+      max-width: 900px;
+      min-width: 240px;
+      margin: 2.5rem auto 1.5rem;
+      display: block;
+      height: auto;
+      filter: drop-shadow(0 8px 32px #ffe08280);
+      border-radius: 16px;
+      background: #fffde7;
+      padding: 1.5rem 0;
+    }
+
+    .hero img:not(.hero-title-img) {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 22px;
+      box-shadow: 0 8px 32px #ffe08240;
+      background: #fffde7;
+      display: block;
+    }
+
+    .message {
+      background: linear-gradient(90deg, #ffe082 0%, #f9c439 100%);
+      padding: 2.5rem 1rem 2.5rem 1rem;
+      text-align: center;
+      margin: 2rem auto 0 auto;
+      border-radius: 22px;
+      max-width: 900px;
+      box-shadow: 0 4px 32px #ffe08240;
+      border: 1.5px solid #ffe082;
+    }
+
+    .message h1 {
+      font-family: 'Playfair Display', 'Montserrat', serif;
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: #b8860b;
+      /* deeper warm gold */
+      letter-spacing: -1px;
+      margin-bottom: 1rem;
+    }
+
+    .message p {
+      margin-top: 0.5rem;
+      font-size: 1.25rem;
+      color: #7c5c13;
+      /* warm brown */
+      font-family: 'Montserrat', 'Inter', Arial, sans-serif;
+      font-weight: 400;
+    }
+
+    .hundred-model {
+      background: #fffbe7;
+      margin: 2.5rem auto 0 auto;
+      padding: 2.5rem 1.5rem 2.5rem 1.5rem;
+      border-radius: 22px;
+      max-width: 900px;
+      box-shadow: 0 4px 32px #ffe08230;
+      border: 1.5px solid #ffe082;
+      text-align: left;
+      font-family: 'Montserrat', 'Inter', Arial, sans-serif;
+    }
+    .hundred-model h2 {
+      font-family: 'Playfair Display', 'Montserrat', serif;
+      font-size: 2.1rem;
+      font-weight: 700;
+      color: #b8860b;
+      margin-bottom: 1.1rem;
+      letter-spacing: -0.5px;
+    }
+    .hundred-model p {
+      font-size: 1.18rem;
+      color: #7c5c13;
+      line-height: 1.8;
+      font-weight: 400;
+    }
+    @media (max-width: 900px) {
+      header {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1.5rem 1rem 1rem 1rem;
+      }
+      .logo img {
+        height: 70px;
+      }
+      .hero-title-img {
+        max-width: 98vw;
+      }
+      .message {
+        max-width: 98vw;
+      }
+      .hundred-model {
+        max-width: 98vw;
+        padding: 1.5rem 0.7rem 1.5rem 0.7rem;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero-title-img {
+        margin: 1.2rem auto 0.7rem;
+      }
+      .message h1 {
+        font-size: 2rem;
+      }
+      .cta-buttons button {
+        padding: 0.7rem 1.2rem;
+        font-size: 1rem;
+      }
+      .hundred-model h2 {
+        font-size: 1.3rem;
+      }
+      .hundred-model p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="Screen Shot 2025-07-11 at 7.00.44 PM.png" alt="Company Logo" style="height:120px; width:auto; display:block;">
+    </div>
+    <div class="cta-buttons">
+      <span style="align-self:center; font-size:1.15rem; font-weight:600; color:#222;">Make a Difference!</span>
+      <button class="btn-primary" id="donate-btn" style="box-shadow:0 4px 24px #f9c43980; font-size:1.18rem; border-width:3px; padding:1rem 2.5rem;">Donate Now</button>
+    </div>
+  </header>
+
+  <!-- Hero Image -->
+  <div class="hero">
+    <!-- Hero Title Image -->
+    <img src="Screen Shot 2025-06-29 at 6.31.33 PM.png" alt="Hero Title" class="hero-title-img">
+    <img src="https://via.placeholder.com/1200x600" alt="">
+  </div>
+
+  <!-- Messaging -->
+  <section class="message">
+    <h1>Real Impact, Real Donations</h1>
+    <p>charity: water, where 100% of your donation goes straight to people who need it, guaranteed.</p>
+  </section>
+
+  <!-- 100% Model Section -->
+  <section class="hundred-model">
+    <h2>The 100% Model</h2>
+    <p>
+      When charity: water began, we made a bold promise: <strong>100% of public donations would go directly to fund sustainable clean water projects.</strong> We’d even pay back credit card fees, meaning if a donor gave $100 with a credit card and we got only $97, we’d make up the $3 and send the full $100 to provide clean water for people in need.<br><br>
+      Since we treat the clean water projects and operations sides of our business differently — separate purposes, separate fundraising goals, and separate bank accounts — we can guarantee that every public dollar donated helps bring clean water to people in need. And so far, more than 1 million people from 100+ countries have given in this way.
+    </p>
+  </section>
+
+</body>
+<script>
+  document.getElementById('donate-btn').onclick = function() {
+    window.location.href = 'thankyou.html';
+  };
+</script>
+</html>
