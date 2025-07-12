@@ -1,1 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>charity: water</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="header">
+    <div class="logo">💧 charity: water</div>
+    <div class="cta-buttons">
+      <a href="#" class="btn primary">Make a Difference</a>
+      <a href="#" class="btn secondary">Donate Now</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-image">
+      <!-- Replace this placeholder URL with your real image -->
+      <img src="https://via.placeholder.com/1200x500?text=Project+in+Action" alt="Team at work">
+    </div>
+    <div class="hero-text">
+      <h1>Real Impact, Real Donations</h1>
+      <p>charity: water, where 100% of your donation goes straight to people who need it, guaranteed.</p>
+    </div>
+  </section>
+
+</body>
+</html>
 
